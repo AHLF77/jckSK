@@ -47,3 +47,20 @@ public class exam01 {
 ```
 
 - 답: HelloBHi
+
+### C 언어의 출력 결과 작성하기
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int fn(int n) {
+	if (n <= 1)
+		return 1;
+	else
+		return n * fn(n - 1);
+}
+
+void main() {
+	printf("%d", fn(4));
+}
+```
