@@ -65,3 +65,21 @@ void main() {
 }
 ```
 - 답: 24
+
+### JAVA 코드의 출력 결과 작성하기
+```java
+package jscskws;
+
+public class exam02 {
+
+	public static void main(String[] args) {
+		String s = "red";
+		boolean [] b = new boolean[1]; //기본 값을 참으로 세팅완료 
+		if(b[0]) s = "blue"; // b[0] false 이므로 실행이 되지 않음
+		System.out.println(s);
+	}
+
+}
+
+```
+- 답: red
