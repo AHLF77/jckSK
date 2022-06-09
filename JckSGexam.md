@@ -83,3 +83,41 @@ public class exam02 {
 
 ```
 - 답: red
+
+### C 코드의 출력 결과 작성하기
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+void main() {
+	int i,j;
+	int temp;
+	int a[5] = {75,95,85,100,50};
+
+	for (i = 0; i < 4; i++) {
+		for (j = 0; j < 4-i; j++) {
+			if (a[j] > a[j+1]) {
+				temp = a[j];
+				printf("%d ", temp);
+				a[j] = a[j + 1];
+				
+				a[j + 1] = temp;
+				
+			}
+		}
+	}
+
+	for (i = 0; i < 5; i++) {
+		printf("%d ", a[i]);
+	}
+}
+```
+- 답: 50,75,85,95,100
+- 해설
+1. 반복 i:i가 0일때 부터 4보다 작을때까지, 즉 i는 0,1,2,3이 됨.
+2. 반복 j: j가 0일때 부터 j가 4-i보다 작아질 때까지
+※ 요약 
+i가 0일 때, j는 0,1,2,3
+i가 1일 때, j는 0,1,2
+i가 2일 때, j는 0,1
+i가 3일 때, j는 0
